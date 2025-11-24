@@ -1,5 +1,5 @@
-import js from '@eslint/js';
-import stylisticJs from '@stylistic/eslint-plugin-js';
+import js from '@eslint/js'
+import stylisticJs from '@stylistic/eslint-plugin-js'
 
 export default [
   js.configs.recommended,
@@ -10,9 +10,14 @@ export default [
     },
     rules: {
       ...stylisticJs.configs.recommended.rules,
-      'semi': ['error', 'always'],
-      'indent': ['error', 2],
-      'quotes': ['error', 'single']
+      semi: ['error', 'never'],
+      indent: ['error', 2],
+      quotes: ['error', 'single'],
+      'comma-dangle': ['error', 'always-multiline'],
+      'quote-props': ['error', 'as-needed'],
+      'no-trailing-spaces': 'error',
+      'eol-last': 'error',
+      '@stylistic/arrow-parens': ['error', 'as-needed']
     }
   }
-];
+]
