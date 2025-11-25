@@ -1,23 +1,14 @@
-import js from '@eslint/js'
-import stylisticJs from '@stylistic/eslint-plugin-js'
-
-export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.js'],
-    plugins: {
-      '@stylistic/js': stylisticJs
-    },
-    rules: {
-      ...stylisticJs.configs.recommended.rules,
-      semi: ['error', 'never'],
-      indent: ['error', 2],
-      quotes: ['error', 'single'],
-      'comma-dangle': ['error', 'always-multiline'],
-      'quote-props': ['error', 'as-needed'],
-      'no-trailing-spaces': 'error',
-      'eol-last': 'error',
-      '@stylistic/arrow-parens': ['error', 'as-needed']
-    }
-  }
-]
+// eslint.config.js
+export default {
+  files: ['**/*.js'],
+  rules: {
+    'semi': ['error', 'never'],
+    'no-multiple-empty-lines': ['error', { 'max': 1 }],
+    'comma-dangle': ['error', 'always-multiline'],
+    'quote-props': ['error', 'consistent'],
+    'quotes': ['error', 'single'],
+    'indent': ['error', 2],
+    'no-trailing-spaces': 'error',
+    'eol-last': 'error',
+  },
+}

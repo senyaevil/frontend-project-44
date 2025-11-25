@@ -1,7 +1,7 @@
 import getRandomNumber from '../utils.js'
 import runEngine from '../index.js'
 
-const isEven = number => number % 2 === 0
+const isEven = (number) => number % 2 === 0
 
 const generateRound = () => {
   const question = getRandomNumber(1, 100)
@@ -14,5 +14,4 @@ const runEvenGame = () => {
   runEngine(rules, generateRound)
 }
 
-export default runEvenGame;
-
+export default runEvenGame
