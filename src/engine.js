@@ -23,4 +23,5 @@ export const runGame = (rules, generateRound) => {
   }
 
   console.log(`Congratulations, ${name}!`);
-};
+
+}
