@@ -14,4 +14,5 @@ const runEvenGame = () => {
   runEngine(rules, generateRound)
 }
 
-export default runEvenGame
+export default runEvenGame;
+
