@@ -2,33 +2,33 @@ import getRandomNumber from '../utils.js'
 import runEngine from '../index.js'
 
 const calculate = (num1, num2, operator) => {
-    switch (operator) {
-        case '+':
-            return num1 + num2
-        case '-':
-            return num1 - num2
-        case '*':
-            return num1 * num2
-        default:
-            throw new Error(`Unknown operator: ${operator}`)
-    }
+  switch (operator) {
+  case '+':
+    return num1 + num2
+  case '-':
+    return num1 - num2
+  case '*':
+    return num1 * num2
+  default:
+    throw new Error(`Unknown operator: ${operator}`)
+  }
 }
 
 const generateRound = () => {
-    const num1 = getRandomNumber(1, 25)
-    const num2 = getRandomNumber(1, 25)
-    const operators = ['+', '-', '*']
-    const operator = operators[getRandomNumber(0, operators.length - 1)]
+  const num1 = getRandomNumber(1, 25)
+  const num2 = getRandomNumber(1, 25)
+  const operators = ['+', '-', '*']
+  const operator = operators[getRandomNumber(0, operators.length - 1)]
 
-    const question = `${num1} ${operator} ${num2}`
-    const correctAnswer = String(calculate(num1, num2, operator))
+  const question = `${num1} ${operator} ${num2}`
+  const correctAnswer = String(calculate(num1, num2, operator))
 
-    return [question, correctAnswer]
+  return [question, correctAnswer]
 }
 
 const runCalcGame = () => {
-    const rules = 'What is the result of the expression?'
-    runEngine(rules, generateRound)
+  const rules = 'What is the result of the expression?'
+  runEngine(rules, generateRound)
 }
 
 export default runCalcGame
